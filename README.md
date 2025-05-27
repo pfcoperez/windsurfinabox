@@ -21,7 +21,7 @@ Windsurf's Cascade agent within a Docker image, to be used in headless mode. Wit
 - Run the image generated with this project:
 
 ```bash
-docker run --rm -it --name windsurf -e WINDSURF_TOKEN=$WINDSURF_TOKEN -v /home/pablo/.config/Windsurf:/home/ubuntu/.config/Windsurf -v /home/pablo/temp/workspace:/home/ubuntu/workspace windsurf bash
+docker run --rm -it --name windsurf -e WINDSURF_TOKEN=$WINDSURF_TOKEN -v /home/pablo/.config/Windsurf:/home/ubuntu/.config/Windsurf -v /home/pablo/temp/workspace:/home/ubuntu/workspace windsurf
 ```
 
 You might have noticed that the token is passed as the `WINDSURF_TOKEN` and the workspace mounted with `-v /home/pablo/temp/workspace:/home/ubuntu/workspace`.
