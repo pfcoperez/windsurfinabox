@@ -33,5 +33,9 @@ RUN chown ubuntu:ubuntu -R /home/ubuntu/workspace
 
 # Prepare resource files
 COPY --chown=ubuntu src/workflows/entry-workflow.md /home/ubuntu/entry-workflow.md
+#RUN mkdir -p /home/ubuntu/.config/Windsurf/User/globalStorage
+#COPY --chown=ubuntu:ubuntu src/config/state.vscdb /home/ubuntu/.config/Windsurf/User/globalStorage/state.vscdb
+RUN mkdir -p /home/ubuntu/.config/i3
+COPY --chown=ubuntu:ubuntu src/config/i3.conf /home/ubuntu/.config/i3/config 
 
 CMD ["/entrypoint.sh"]
