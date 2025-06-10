@@ -64,6 +64,7 @@ function windsurfLogin() {
     guiRunEditorCommand "token"
     sleep 2
     xdotool type $WINDSURF_TOKEN
+    sleep 2
     xdotool key "Return"
     sleep 2
     #guiTypeLine "" # TODO: Check if this is really needed
@@ -86,7 +87,7 @@ function startWindsurf() {
     cp /home/ubuntu/entry-workflow.md $WORKSPACE_WORKFLOWS_PATH
     log "Starting Windsurf editor at DISPLAY=$DISPLAY"
     #windsurf --no-sandbox --user-data-dir /home/ubuntu &
-    windsurf --disable-gpu --no-sandbox --verbose . 2>&1 > ~/windsurf-ui.log &
+    windsurf --disable-workspace-trust --disable-gpu --no-sandbox --verbose . 2>&1 > ~/windsurf-ui.log &
     disown
 }
 
